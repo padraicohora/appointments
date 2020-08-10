@@ -1,0 +1,27 @@
+{
+  "name": "appointments",
+  "version": "1.0.0",
+  "description": "react testing chapter 1",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/padraicohora/appointments.git"
+  },
+  "keywords": [
+    "testing",
+    "jest",
+    "react"
+  ],
+  "author": "Padora",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/padraicohora/appointments/issues"
+  },
+  "homepage": "https://github.com/padraicohora/appointments#readme",
+  "devDependencies": {
+    "jest": "^26.3.0"
+  }
+}
