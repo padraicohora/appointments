@@ -70,12 +70,11 @@ describe('CustomerForm', () => {
                 />
             );
             await ReactTestUtils.Simulate.change(field(fieldName), {
-                target: {value}
+                target: {value, name: fieldName}
             });
             await ReactTestUtils.Simulate.submit(form('customer'));
         });
     };
-
 
     beforeEach(() => {
         ({render, container} = createContainer());
@@ -113,5 +112,13 @@ describe('CustomerForm', () => {
         itSavesExistingValueWhenSubmitted("phoneNumber")
         itSavesNewValueWhenSubmitted("phoneNumber", "12345");
     });
+
+    it("has a submit button", () => {
+        render(<CustomerForm />);
+        const submitButton = container.querySelector(
+            "input[type='submit']"
+        );
+        expect(submitButton).not.toBeNull();
+    })
 
 });
