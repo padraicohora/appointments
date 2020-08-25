@@ -4,22 +4,6 @@ export const CustomerForm = ({firstName, lastName, phoneNumber, onSubmit}) => {
 
     const [customer, setCustomer] = useState({firstName, lastName, phoneNumber})
 
-    const handleChangeFirstName = ({ target }) =>
-        setCustomer(customer => ({
-            ...customer,
-            firstName: target.value
-        }));
-    const handleChangeLastName = ({ target }) =>
-        setCustomer(customer => ({
-            ...customer,
-            lastName: target.value
-        }));
-    const handleChangePhoneNumber = ({ target }) =>
-        setCustomer(customer => ({
-            ...customer,
-            phoneNumber: target.value
-        }));
-
     const handleChange = ({ target }) => {
         setCustomer(customer => ({
             ...customer,
